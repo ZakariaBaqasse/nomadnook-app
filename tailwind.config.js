@@ -12,6 +12,10 @@ export default {
           dark: "#333333",
         },
       },
+      fontFamily: {
+        primary: "Playfair Display",
+        secondary: "Open Sans",
+      },
     },
   },
   plugins: [],

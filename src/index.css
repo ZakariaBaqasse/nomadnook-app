@@ -1,3 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.homepage-logo {
+  width: 14.3125rem;
+  height: 5.75rem;
+  flex-shrink: 0;
+}
+
+.nav__button--login {
+  @apply text-gray-light bg-primary;
+  border-radius: 31.25rem;
+  display: inline-flex;
+  padding: 0.8125rem 3rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.nav__button--signup {
+  @apply text-gray-dark bg-secondary;
+  border-radius: 31.25rem;
+  display: inline-flex;
+  padding: 0.8125rem 3rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.nav__button--login:hover,
+.nav__button--signup:hover {
+  filter: brightness(85%);
+}
+
+.home__heading--4 {
+  width: 23.375rem;
+}
+
+@media (max-width: 1024px) {
+  .hidden__nav {
+    opacity: 0;
+    height: 0;
+  }
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(18, 30, 39, 0.4);
+  z-index: 49;
+  backdrop-filter: blur(15px);
+}
+
+@-webkit-keyframes rotate-forever {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes rotate-forever {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-forever {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.loading-spinner {
+  -webkit-animation-duration: 0.75s;
+  -moz-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: rotate-forever;
+  -moz-animation-name: rotate-forever;
+  animation-name: rotate-forever;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  animation-timing-function: linear;
+  height: 30px;
+  width: 30px;
+  border: 8px solid #ffffff;
+  border-right-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+  margin: -15px 0 -15px;
+}
+
+.form-control input {
+  @apply border-2 border-primary rounded-md text-base w-60 md:w-96;
+  display: block;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+}
+
+.form-control {
+  @apply mb-8;
+}
+
+.form-control input:focus {
+  @apply border-teal;
+}
+
+.submit__button--signup {
+  @apply bg-secondary font-secondary w-fit m-auto px-4 py-2 rounded-full font-semibold text-primary;
+}
+
+.submit__button--login {
+  @apply bg-primary font-secondary w-fit m-auto px-4 py-2 rounded-full font-semibold text-gray-light;
+}
+
+.submit__button--login:hover,
+.submit__button--signup:hover {
+  filter: brightness(85%);
+}
+
+.authmodal__container {
+  @apply fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11/12 md:w-3/4 z-50 bg-gray-light h-2/3 lg:h-5/6 rounded-md lg:w-1/3;
+}
+
+.auth__form {
+  @apply fixed top-1/4 left-1/2 -translate-x-1/2;
+}
+
+.error {
+  @apply text-red-600 font-secondary capitalize text-sm;
+}
+
