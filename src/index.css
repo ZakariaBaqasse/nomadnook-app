@@ -143,6 +143,13 @@
   line-height: 1.42857143;
 }
 
+.form-input {
+  @apply border-2 border-primary rounded-md text-base md:w-44 w-60;
+  display: block;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+}
+
 .form-control {
   @apply mb-8;
 }
@@ -165,7 +172,7 @@
 }
 
 .authmodal__container {
-  @apply fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11/12 md:w-3/4 z-50 bg-gray-light h-2/3 lg:h-5/6 rounded-md lg:w-1/3;
+  @apply fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11/12 md:w-3/4 z-50 bg-gray-light h-2/3 lg:h-5/6 rounded-md lg:w-1/3 overflow-y-scroll;
 }
 
 .auth__form {
@@ -175,4 +182,3 @@
 .error {
   @apply text-red-600 font-secondary capitalize text-sm;
 }
-

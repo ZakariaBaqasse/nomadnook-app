@@ -1,3 +1,5 @@
+"use client";
+
 import { useReducer } from "react";
 import HomeNavBar from "../components/HomeNavBar";
 import { ActionType } from "../utils/types";
